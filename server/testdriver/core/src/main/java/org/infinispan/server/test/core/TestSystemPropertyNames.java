@@ -61,4 +61,20 @@ public class TestSystemPropertyNames {
     * LogMessageWaitStrategy pattern to use during container initialization
     */
    public static final String INFINISPAN_TEST_CONTAINER_DATABASE_LOG_MESSAGE = "org.infinispan.test.database.container.log.regex";
+   /**
+    * Specifies the name of the keycloak base image
+    */
+   public static final String KEYCLOAK_IMAGE = "quay.io/keycloak/keycloak:10.0.1";
+   /**
+    * Specifies the keycloak user
+    */
+   public static final String KEYCLOAK_USER = "KEYCLOAK_USER";
+   /**
+    * Specifies the keycloak user password
+    */
+   public static final String KEYCLOAK_PASSWORD = "KEYCLOAK_PASSWORD";
+   /**
+    * Specifies the keycloak realm
+    */
+   public static final String KEYCLOAK_REALM = "keycloak/infinispan-keycloak-realm.json";
 }

@@ -13,6 +13,7 @@ import org.infinispan.server.test.junit4.InfinispanServerRule;
 import org.infinispan.server.test.junit4.InfinispanServerRuleBuilder;
 import org.infinispan.server.test.junit4.InfinispanServerTestMethodRule;
 import org.infinispan.server.test.core.KeyCloakServerRule;
+import org.infinispan.server.test.core.TestSystemPropertyNames;
 import org.junit.ClassRule;
 import org.junit.Rule;
 import org.junit.Test;
@@ -34,7 +35,7 @@ public class AuthenticationKeyCloakIT {
 
 
    @ClassRule
-   public static KeyCloakServerRule KEYCLOAK = new KeyCloakServerRule("keycloak/infinispan-keycloak-realm.json");
+   public static KeyCloakServerRule KEYCLOAK = new KeyCloakServerRule(System.getProperty("keycloak/infinispan-keycloak-realm.json", TestSystemPropertyNames.KEYCLOAK_REALM));
 
    @Rule
    public InfinispanServerTestMethodRule SERVER_TEST = new InfinispanServerTestMethodRule(SERVERS);
